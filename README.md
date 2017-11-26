@@ -1,0 +1,3 @@
+- `docker build -t blazegraph-wikidata .`
+- `BLAZEGRAPH_MEMORY=8g ./load.sh data/data.jnl parts-*.ttl.gz`
+- `docker run -it --rm -e BLAZEGRAPH_MEMORY=8g -p 9999:9999 -v `pwd`/data:/data blazegraph-wikidata`
